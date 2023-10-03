@@ -1,0 +1,14 @@
+spring:
+  jmx:
+    enable: false
+  application:
+    name: basket-service-ft
+  profiles:
+    active: local
+
+service:
+  host: http://localhost:8083
+
+wiremock:
+  host: localhost
+  port: 9000

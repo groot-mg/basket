@@ -1,0 +1,52 @@
+server:
+  port: 8083
+  servlet:
+    contextPath: /basket-service
+
+spring:
+  jmx:
+    enable: false
+  application:
+    name: basket-service
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: ${KEYCLOAK_URL:http://localhost:8180}/realms/${KEYCLOAK_REALM:shopping-api}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+    register-with-eureka: true
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      base-path: /private
+      exposure.include: info,health,prometheus
+      path-mapping.prometheus: /metrics
+  info:
+    java:
+      enabled: true
+  health:
+    diskspace:
+      enabled: false
+
+springdoc:
+  api-docs:
+    path: /private/api-docs
+  show-actuator: true
+  swagger-ui:
+    path: /private/swagger
+
+#logging:
+#  level:
+#    reactor.netty: INFO
+#    org.springframework.security: TRACE
+#    org.springframework.web: DEBUG
