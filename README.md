@@ -1,5 +1,7 @@
 # Basket Service
 
+[![Build and test](https://github.com/groot-mg/basket-service/actions/workflows/basket-service-ci.yml/badge.svg)](https://github.com/groot-mg/basket-service/actions/workflows/basket-service-ci.yml) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=groot-mg_basket-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=groot-mg_basket-service) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/groot-mg/basket-service/blob/main/LICENSE)
+
 Basket Service is used to manage a customer basket. When a basket is closed it produces notification messages to kafka.
 
 ## Build, tests and run

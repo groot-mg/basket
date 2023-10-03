@@ -48,4 +48,4 @@ jobs:
       - name: Run unit tests
         run: ./gradlew --no-daemon :basket-service-app:test
       - name: Run functional tests
-        run: ./gradlew --no-daemon :sales-catalog-ft:cucumber
+        run: ./gradlew --no-daemon :basket-service-ft:cucumber
